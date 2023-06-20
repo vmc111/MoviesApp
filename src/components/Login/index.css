@@ -9,14 +9,15 @@
   align-items: center;
 }
 .heading {
-  color: #e50014;
-  font-size: 52px;
+  width: 180px;
   margin-top: 48px;
   margin-left: 168px;
   align-self: flex-start;
 }
 .login-form {
-  background-color: transparent;
+  margin-top: 10vh;
+  background-color: #0c0b10;
+  opacity: 0.8;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -83,9 +84,9 @@
     padding: 32px;
   }
   .heading {
-    font-size: 27px;
+    width: 100px;
     margin: 0px;
-    margin-bottom: 10vh;
+    margin-bottom: 20vh;
   }
   .login-form {
     margin: 0px;

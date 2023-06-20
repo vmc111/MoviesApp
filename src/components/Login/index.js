@@ -12,12 +12,12 @@ class Login extends Component {
 
   onLoginSuccess = data => {
     const jwtToken = data.jwt_token
-    Cookies.set('jwt_token', jwtToken, {expires: 1})
+    Cookies.set('jwt_token', jwtToken, {expires: 10})
   }
 
   onLoginFailure = data => {
-    const resposeText = data.error_msg
-    this.setState({errorMsg: resposeText})
+    const responseText = data.error_msg
+    this.setState({errorMsg: responseText})
   }
 
   LoginApiCall = async event => {
@@ -69,7 +69,7 @@ class Login extends Component {
             onChange={this.onChangePassword}
             type="password"
             className="input-ele"
-            id="user-name"
+            id="password"
             value={password}
           />
         </div>
@@ -84,7 +84,11 @@ class Login extends Component {
   render() {
     return (
       <div className="login-bg">
-        <h1 className="heading">Movies</h1>
+        <img
+          className="heading"
+          src="https://res.cloudinary.com/dqppfjvrw/image/upload/v1687185904/Group_7399_muwvua.png"
+          alt="login website logo"
+        />
         {this.LoginForm()}
       </div>
     )
